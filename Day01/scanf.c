@@ -69,7 +69,7 @@ int main()
 		
 		scanf_s("%d", &age);
 
-		printf("당신은 %d 살 입니다.", age);
+		printf("당신은 %d 살 입니다.\n", age);
 
 
 		printf("당신의 이름과 나이를 입력하세요: ");
