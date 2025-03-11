@@ -24,10 +24,19 @@
     <ClCompile Include="Name.c">
       <Filter>소스 파일</Filter>
     </ClCompile>
+    <ClCompile Include="printf2.c">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="printf3.c">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="printf4.c">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
-    <None Include="README.md">
-      <Filter>헤더 파일</Filter>
+    <None Include="..\README.md">
+      <Filter>리소스 파일</Filter>
     </None>
   </ItemGroup>
 </Project>
