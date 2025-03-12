@@ -13,49 +13,55 @@
       <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
       <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
     </Filter>
-    <Filter Include="NewFilter1">
+    <Filter Include="day01">
+      <UniqueIdentifier>{92715e3f-86f5-44a2-aa45-6b88eaa3144b}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="day02">
       <UniqueIdentifier>{7f8b1b86-bac4-480f-90b2-fcc86df56d4d}</UniqueIdentifier>
     </Filter>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="printf.c">
-      <Filter>소스 파일</Filter>
-    </ClCompile>
     <ClCompile Include="HelloWorld.c">
-      <Filter>소스 파일</Filter>
+      <Filter>day01</Filter>
     </ClCompile>
     <ClCompile Include="Name.c">
-      <Filter>소스 파일</Filter>
+      <Filter>day01</Filter>
+    </ClCompile>
+    <ClCompile Include="printf.c">
+      <Filter>day01</Filter>
     </ClCompile>
     <ClCompile Include="printf2.c">
-      <Filter>소스 파일</Filter>
+      <Filter>day01</Filter>
     </ClCompile>
     <ClCompile Include="printf3.c">
-      <Filter>소스 파일</Filter>
+      <Filter>day01</Filter>
     </ClCompile>
     <ClCompile Include="printf4.c">
-      <Filter>소스 파일</Filter>
-    </ClCompile>
-    <ClCompile Include="Value.c">
-      <Filter>소스 파일</Filter>
-    </ClCompile>
-    <ClCompile Include="Value2.c">
-      <Filter>소스 파일</Filter>
-    </ClCompile>
-    <ClCompile Include="Value3.c">
-      <Filter>소스 파일</Filter>
-    </ClCompile>
-    <ClCompile Include="Value4.c">
-      <Filter>소스 파일</Filter>
-    </ClCompile>
-    <ClCompile Include="Value5.c">
-      <Filter>소스 파일</Filter>
-    </ClCompile>
-    <ClCompile Include="Value6.c">
-      <Filter>소스 파일</Filter>
+      <Filter>day01</Filter>
     </ClCompile>
     <ClCompile Include="scanf.c">
-      <Filter>소스 파일</Filter>
+      <Filter>day01</Filter>
+    </ClCompile>
+    <ClCompile Include="Value.c">
+      <Filter>day01</Filter>
+    </ClCompile>
+    <ClCompile Include="Value2.c">
+      <Filter>day01</Filter>
+    </ClCompile>
+    <ClCompile Include="Value3.c">
+      <Filter>day01</Filter>
+    </ClCompile>
+    <ClCompile Include="Value4.c">
+      <Filter>day01</Filter>
+    </ClCompile>
+    <ClCompile Include="Value5.c">
+      <Filter>day01</Filter>
+    </ClCompile>
+    <ClCompile Include="Value6.c">
+      <Filter>day01</Filter>
+    </ClCompile>
+    <ClCompile Include="operator.c">
+      <Filter>day02</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>

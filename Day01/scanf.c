@@ -58,30 +58,35 @@ int main()
 
 
 
-		printf("당신의 이름을 입력하세요: ");
-		scanf_s("%s", str, sizeof(str)); 
+		//printf("당신의 이름을 입력하세요: ");
+		//scanf_s("%s", str, sizeof(str)); 
 
-		printf("당신의 이름은 %s 입니다.\n", str);
-
-
-		printf("당신의 나이를 입력하세요: ");
-		
-		
-		scanf_s("%d", &age);
-
-		printf("당신은 %d 살 입니다.\n", age);
+		//printf("당신의 이름은 %s 입니다.\n", str);
 
 
-		printf("당신의 이름과 나이를 입력하세요: ");
-		
-		scanf_s("%s %d", str, sizeof(str), &age);
+		//printf("당신의 나이를 입력하세요: ");
+		//
+		//
+		//scanf_s("%d", &age);
 
-		printf("당신의 이름은 %s 이고, 나이는 %d살 입니다.\n", str, age);
+		//printf("당신은 %d 살 입니다.\n", age);
+
+
+		//printf("당신의 이름과 나이를 입력하세요: ");
+		//
+		//scanf_s("%s %d", str, sizeof(str), &age);
+
+		//printf("당신의 이름은 %s 이고, 나이는 %d살 입니다.\n", str, age);
+
+
+		printf("당신의 나이와 이름을 입력하시오 : ");
+
+		scanf_s("%d %s", &age, str, sizeof(str)); // str은 배열이름자체가 주소라 주소연산자가필요없다.
+
+		printf("당신의 나이는 %d살 이고, 이름은 %s 입니다.\n", age, str);
 
 
 		return 0;
 	}
-
-
 
 }
