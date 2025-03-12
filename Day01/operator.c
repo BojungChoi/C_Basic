@@ -15,9 +15,20 @@ int main()
 	res = (n >= 30);
 	printf("res: %d\n", res);
 
-	res = !(n >= 30);
-	printf("res: %d\n", res);
+	res = n << 1 ;
+	printf("res: %x\n", res);
+
+	res = res >> 1;
+	printf("res: %x\n", res);
 
 
+	int n2 = 143;				
+	res = n2 << 1;			
+
+	res = n2 >> 1;				
+	printf("res: %x\n", res);	
+	
+	
 	return 0;
+
 }

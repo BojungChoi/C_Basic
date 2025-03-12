@@ -16,8 +16,8 @@
     <Filter Include="day01">
       <UniqueIdentifier>{92715e3f-86f5-44a2-aa45-6b88eaa3144b}</UniqueIdentifier>
     </Filter>
-    <Filter Include="day02">
-      <UniqueIdentifier>{7f8b1b86-bac4-480f-90b2-fcc86df56d4d}</UniqueIdentifier>
+    <Filter Include="소스 파일\day02">
+      <UniqueIdentifier>{b6aed365-e6d7-4a55-a8e0-2db66ccbade8}</UniqueIdentifier>
     </Filter>
   </ItemGroup>
   <ItemGroup>
@@ -60,8 +60,20 @@
     <ClCompile Include="Value6.c">
       <Filter>day01</Filter>
     </ClCompile>
+    <ClCompile Include="Operator2.c">
+      <Filter>소스 파일\day02</Filter>
+    </ClCompile>
+    <ClCompile Include="casting.c">
+      <Filter>소스 파일\day02</Filter>
+    </ClCompile>
+    <ClCompile Include="if.c">
+      <Filter>소스 파일\day02</Filter>
+    </ClCompile>
+    <ClCompile Include="oper2.c">
+      <Filter>소스 파일\day02</Filter>
+    </ClCompile>
     <ClCompile Include="operator.c">
-      <Filter>day02</Filter>
+      <Filter>소스 파일\day02</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>

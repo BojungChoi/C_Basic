@@ -195,3 +195,63 @@ printf("Min: %d", min);  // 출력: Min: 5
 double result = (double)10 / 3;  // 정수를 실수로 변환
 printf("%.2f", result);  // 출력: 3.33
 ```
+
+
+## 제어문
+
+1. 선택제어문 : if문, switch문
+
+	- if문 형식
+	```
+	if(조건식)
+	{
+		실행문;
+	}
+	else if(조건식)
+	{
+		실행문;
+	}
+	else
+	{
+		실행문;
+	}
+	```
+	- switch문 형식
+	```
+	switch(변수)
+	{
+		case 값1:
+			실행문;
+			break;
+		case 값2:
+			실행문;
+			break;
+		default:
+			실행문;
+			break;
+	}
+	```
+2. 반복제어문 : for문, while문, do-while문
+
+	- for문 형식
+	```
+	for(초기식; 조건식; 증감식)
+	{
+		실행문;
+	}
+	```
+	- while문 형식
+	```
+	while(조건식)
+	{
+		실행문;
+	}
+	```
+	- do-while문 형식
+	```
+	do
+	{
+		실행문;
+	}
+	while(조건식);
+	```
