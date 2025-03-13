@@ -16,7 +16,7 @@ int main()
 		}
 		else if ((ch1 >= 'a') && (ch1 <= 'z'))
 		{
-			printf("대문자를 입력하셨군요!\n");
+			printf("소문자를 입력하셨군요!\n");
 			printf("입력한 수 변환 완료! : %c\n ", SoGoGoDae(ch1));
 		}
 		else

@@ -7,7 +7,7 @@ int main()
 
 	printf("ary[0]: %d \n", ary[0]); // 배열의 첫 번째 요소 출력
 	ary[3] = 400;
-	printf("ary[3]: %d \n", ary[3]); 
+	printf("ary[3]: %d \n", ary[3]);
 
 
 	for (int i = 0; i < 5; i++) // 배열의 모든 요소 출력
@@ -16,4 +16,4 @@ int main()
 	}
 
 	return 0;
-}
+} 
