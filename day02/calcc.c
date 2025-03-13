@@ -21,7 +21,7 @@ int main() {
 
     getchar();  // 버퍼에 남은 \n 처리
     printf("연산자를 입력하세요.\n");
-    scanf("%c", &op);  // 연산자 입력 받기
+    scanf_s("%c", &op, sizeof(op));  // 연산자 입력 받기
 
     switch (op)
     {
