@@ -15,53 +15,73 @@
     </Filter>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="array.c">
+    <ClCompile Include="char4.c">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="string.c">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="string2.c">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="string3.c">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="string4.c">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="strcpy.c">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="MyStringCopy.c">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="strlen.c">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="strcat.c">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="strcmp.c">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="strcmp0.c">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="value.c">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="static.c">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="value2.c">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="value3.c">
       <Filter>소스 파일</Filter>
     </ClCompile>
     <ClCompile Include="array2.c">
       <Filter>소스 파일</Filter>
     </ClCompile>
-    <ClCompile Include="array3.c">
+    <ClCompile Include="pointArray.c">
       <Filter>소스 파일</Filter>
     </ClCompile>
-    <ClCompile Include="array4.c">
+    <ClCompile Include="pointArray2.c">
       <Filter>소스 파일</Filter>
     </ClCompile>
-    <ClCompile Include="pointer.c">
+    <ClCompile Include="dpointer.c">
       <Filter>소스 파일</Filter>
     </ClCompile>
-    <ClCompile Include="pointer2.c">
+    <ClCompile Include="dpointer2.c">
       <Filter>소스 파일</Filter>
     </ClCompile>
-    <ClCompile Include="pointer3.c">
+    <ClCompile Include="ArrayPoint.c">
       <Filter>소스 파일</Filter>
     </ClCompile>
-    <ClCompile Include="pointer4.c">
-      <Filter>소스 파일</Filter>
-    </ClCompile>
-    <ClCompile Include="pointer5.c">
-      <Filter>소스 파일</Filter>
-    </ClCompile>
-    <ClCompile Include="pointer6.c">
-      <Filter>소스 파일</Filter>
-    </ClCompile>
-    <ClCompile Include="pointer7.c">
-      <Filter>소스 파일</Filter>
-    </ClCompile>
-    <ClCompile Include="char.c">
-      <Filter>소스 파일</Filter>
-    </ClCompile>
-    <ClCompile Include="char2.c">
-      <Filter>소스 파일</Filter>
-    </ClCompile>
-    <ClCompile Include="char3.c">
-      <Filter>소스 파일</Filter>
-    </ClCompile>
-    <ClCompile Include="DaeSoMun.c">
-      <Filter>소스 파일</Filter>
-    </ClCompile>
-    <ClCompile Include="char4.c">
-      <Filter>소스 파일</Filter>
-    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="..\README.md">
+      <Filter>헤더 파일</Filter>
+    </None>
   </ItemGroup>
 </Project>
