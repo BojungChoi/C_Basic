@@ -249,7 +249,7 @@ scanf_s("%s", str, (unsigned)_countof(str)); // 또는 sizeof(str)
 
 ---
 
-## Day 04 - 동적 메모리 할당 (작성 예정)
+## Day 04 - 배열과 포인터
 
 
 날짜: 2025-03-14  
@@ -257,8 +257,285 @@ scanf_s("%s", str, (unsigned)_countof(str)); // 또는 sizeof(str)
 
 ---
 
-- getchar() 함수
 
+## `getchar()` 함수
+- **키보드로부터 한 문자 입력을 받는 함수**.
+- 입력한 **한 문자를 그대로 반환**한다.
+- 버퍼에 남아있는 문자도 순차적으로 읽을 수 있다.
+- `Enter`를 입력해야 함수가 동작한다 (입력이 완료됨을 의미).
+
+### 기본 사용법
+```c
+#include <stdio.h>
+
+int main() {
+    char ch;
+    
+    printf("문자를 입력하세요: ");
+    ch = getchar();  // 사용자 입력 한 글자 읽기
+    
+    printf("입력한 문자: %c\n", ch);
+    
+    return 0;
+}
+```
+
+### 여러 문자 연속 입력 (반복문 사용)
+```c
+#include <stdio.h>
+
+int main() {
+    char ch;
+
+    printf("여러 문자를 입력하고 Enter를 누르세요: \n");
+
+    while ((ch = getchar()) != '\n') {
+        printf("입력한 문자: %c\n", ch);
+    }
+
+    printf("입력이 끝났습니다.\n");
+
+    return 0;
+}
+```
+
+---
+## `putchar()` 함수
+- 문자 **한 개를 출력**하는 함수.
+- 괄호 안에 **문자 리터럴**이나 **문자 변수**를 넣어서 출력할 수 있음.
+- 반환값은 출력한 문자를 그대로 반환한다.
+
+### 기본 사용법
+```c
+#include <stdio.h>
+
+int main() {
+    char ch = 'A';
+    
+    putchar(ch);   // A 출력
+    putchar('\n'); // 줄바꿈
+
+    return 0;
+}
+```
+
+### 반복문으로 문자 여러 개 출력
+```c
+#include <stdio.h>
+
+int main() {
+    char str[] = "Hello";
+    int i = 0;
+    
+    while (str[i] != '\0') {
+        putchar(str[i]);
+        i++;
+    }
+
+    putchar('\n');
+
+    return 0;
+}
+```
+
+## `getchar()` + `putchar()` 콜라보 예제
+```c
+#include <stdio.h>
+
+int main() {
+    char ch;
+
+    printf("문자를 입력하고 Enter를 누르세요: \n");
+
+    while ((ch = getchar()) != '\n') {
+        putchar(ch);  // 입력한 문자 그대로 출력
+    }
+
+    putchar('\n');
+    
+    return 0;
+}
+```
+
+---
+
+
+###  배열 (Array)
+- 같은 타입의 여러 데이터를 하나의 변수 이름으로 관리하는 자료구조.
+- 인덱스를 통해 각 요소에 접근 가능 (`0`부터 시작).
+
+```c
+#include <stdio.h>
+
+int main() {
+    int arr[5] = {1, 2, 3, 4, 5};
+    
+    printf("첫 번째 값: %d\n", arr[0]);
+    printf("세 번째 값: %d\n", arr[2]);
+    
+    return 0;
+}
+```
+
+---
+
+### `static` 변수
+- 함수 내에서 선언되면, **한 번만 초기화**되고 프로그램이 끝날 때까지 유지됨.
+- 전역 변수처럼 메모리에 유지되지만, **블록 스코프를 가짐**.
+
+```c
+#include <stdio.h>
+
+void counter() {
+    static int count = 0;  // static 변수
+    count++;
+    printf("count: %d\n", count);
+}
+
+int main() {
+    counter();  // count: 1
+    counter();  // count: 2
+    counter();  // count: 3
+    
+    return 0;
+}
+```
+
+---
+
+### `strcmp()` 함수
+- 문자열을 비교하는 함수 (`string compare`).
+- `<string.h>` 라이브러리에 포함.
+- 반환값:
+  - `0` : 두 문자열이 같음
+  - 양수(1) : 첫 번째 문자열이 사전순으로 더 큼
+  - 음수(-1) : 첫 번째 문자열이 사전순으로 더 작음
+
+```c
+#include <stdio.h>
+#include <string.h>
+
+int main() {
+    char str1[] = "apple";
+    char str2[] = "banana";
+    
+    int result = strcmp(str1, str2);
+    
+    if (result == 0) {
+        printf("두 문자열이 같습니다.\n");
+    } else if (result < 0) {
+        printf("str1이 str2보다 사전순으로 앞섭니다.\n");
+    } else {
+        printf("str1이 str2보다 사전순으로 뒤섭니다.\n");
+    }
+    
+    return 0;
+}
+```
+
+---
+
+### 문자열 (String)
+- `char` 배열로 표현.
+- 문자열 끝에는 `\0`이 자동으로 들어감 (널 문자).
+
+```c
+#include <stdio.h>
+
+int main() {
+    char str[10] = "Hello";
+    
+    printf("문자열 출력: %s\n", str);
+    printf("첫 번째 문자: %c\n", str[0]);
+    
+    return 0;
+}
+```
+
+---
+
+### 값 전달 (Value)
+- 함수 호출 시 인자로 **값을 복사해서 전달**.
+- 원본 값은 변하지 않음.
+
+```c
+#include <stdio.h>
+
+void changeValue(int x) {
+    x = 100;
+}
+
+int main() {
+    int num = 50;
+    
+    changeValue(num);
+    printf("num 값: %d\n", num);  // 50 (원본 값은 변화 없음)
+    
+    return 0;
+}
+```
+
+---
+
+### 포인터 변수 (Pointer Variable)
+- **주소값**을 저장하는 변수.
+- `*`와 `&` 기호를 사용.
+- `*` : 포인터가 가리키는 값
+- `&` : 변수의 주소값
+
+```c
+#include <stdio.h>
+
+int main() {
+    int num = 10;
+    int *ptr = &num;  // num의 주소 저장
+    
+    printf("num의 주소값: %p\n", &num);
+    printf("ptr이 가리키는 주소값: %p\n", ptr);
+    printf("ptr이 가리키는 값: %d\n", *ptr);
+    
+    *ptr = 20;  // 포인터를 통해 값 변경
+    printf("num의 값: %d\n", num);
+    
+    return 0;
+}
+```
+
+---
+
+### 포인터를 이용한 값 전달
+- 포인터를 인자로 넘기면, **원본 값 수정 가능**.
+
+```c
+#include <stdio.h>
+
+void changeValue(int *x) {
+    *x = 100;
+}
+
+int main() {
+    int num = 50;
+    
+    changeValue(&num);
+    printf("num 값: %d\n", num);  // 100 (원본 값이 변경됨)
+    
+    return 0;
+}
+```
+
+---
+
+###  요약
+| 개념         | 설명                                                  |
+|--------------|-------------------------------------------------------|
+| 배열(Array)  | 같은 타입의 데이터를 순차적으로 저장하는 자료구조     |
+| static 변수  | 함수가 끝나도 값이 유지되는 지역 변수                 |
+| strcmp()     | 문자열 비교 함수, 같으면 0 반환                       |
+| 문자열(String) | `char` 배열로 구현, `\0`으로 끝남                  |
+| 값 전달      | 함수에 값을 복사해서 넘김, 원본은 변경 안됨          |
+| 포인터       | 변수의 주소를 저장하는 변수, 원본 값 변경 가능        |
+
+---
 
 ## 코드 세그먼트, 데이터 세그먼트, 힙, 스택
 
@@ -299,3 +576,15 @@ int (*pary)[4] = &arr;
 // 배열 전체를 가리키므로 이렇게 사용 가능
 printf("%d\n", (*pary)[0]);  // 1
 printf("%d\n", (*pary)[1]);  // 2
+```
+
+
+---
+
+# Day 05 - 동적 메모리 할당(예정)
+
+
+날짜: 2025-03-17 
+깃허브 링크: [day05 폴더 바로가기]()
+
+---
