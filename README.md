@@ -402,6 +402,24 @@ int main() {
 ```
 
 ---
+## 'strcpy()' 함수
+
+### 기본 개념
+`strcpy()`는 C/C++에서 문자열을 복사할 때 사용하는 함수.  
+원본 문자열(`source`)을 복사 대상(`destination`)에 **널 문자(`\0`)까지 복사**
+
+### 함수 원형
+```cpp
+char* strcpy(char* destination, const char* source);
+```
+```cpp
+char src[] = "Hello";
+char dest[10];
+
+strcpy(dest, src);  // dest는 "Hello"가 된다
+```
+
+
 
 ### `strcmp()` 함수
 - 문자열을 비교하는 함수 (`string compare`).
@@ -855,3 +873,35 @@ func(5, 15);     // a=5,  b=15
 한줄 요약  
 `const` 참조자는 값을 바꾸지 않는 안전한 참조이며, 임시 값(r-value)도 참조할 수 있다.  
 그래서 값 복사를 줄이고 코드 안정성을 높일 때 필수로 사용된다.
+
+
+---
+
+# Day 07 (c++ day02) - 동적 메모리 할당(예정)
+
+
+날짜: 2025-03-19
+깃허브 링크: [day06 폴더 바로가기]()
+
+---
+
+## Class
+    1. 접근제어 지시자(private, public, protected)
+        private - 외부접근x
+        public - 대중적. 외부접근O
+        protected - 자신만 접근 상속의개념
+    
+    2. 멤버변수 - 속성, private 영역
+
+    3. 멤버함수(메서드) - 기능 , public 영역
+
+    객체
+    인스턴스
+    솔직히 실무에서는 거의 같은 의미로 막 섞어 씀.
+    다만 시험이나 개념 잡을 땐,
+
+    "객체" = 존재하는 놈
+    "인스턴스" = 특정 클래스 기반에서 나온 놈
+    이렇게 구분해주면 OK!
+
+    생성자 - 출력이없다. 클래스 이름과 동일
